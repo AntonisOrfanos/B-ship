@@ -1,7 +1,17 @@
-//pixi is not imported, it is used in a script tag in the html file so you need to copy it manualy to the destination folder. I have not yet found a solution to this...
-const app = new PIXI.Application();
+//pixi is not imported, it is used in a script tag in the html file so you need to copy it manualy to the destination folder. I have not yet found a solution to this... FIXED by making pixi.min.js a module
+import PIXIsrc from './src/pixi.min.js'
+
+console.log(PIXIsrc)
+// PIXIsrc()
+
+const app = new PIXIsrc.Application();
 // Add the view to the DOM
 document.body.appendChild(app.view);
+
+// const app = new PIXI.Application();
+// // Add the view to the DOM
+// document.body.appendChild(app.view);
+
 
 // // ex, add display objects
 // app.stage.addChild(PIXI.Sprite.from('something.png'));
